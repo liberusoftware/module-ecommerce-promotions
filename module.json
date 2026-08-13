@@ -1,0 +1,22 @@
+{
+    "name": "ecommerce-promotions",
+    "version": "0.1.0",
+    "description": "The merchant's standing rules for reducing what a shopper pays, the evaluation of those rules against one basket, and the append-only record that a rule was spent on an order.",
+    "category": "capability",
+    "provider": "Liberu\\Ecommerce\\Promotions\\PromotionsServiceProvider",
+    "requires": {
+        "packages": []
+    },
+    "features": [
+        "Offers as standing merchant rules, with a live status and an append-only decision log",
+        "Codes as a separate way of reaching an offer, unique per merchant, many or none per offer",
+        "Basket entitlement quoting that writes nothing and is never stored",
+        "Per-line allocation by largest remainder, summing to the entitlement total exactly",
+        "Free shipping published as a real reduction, separate from the line allocation",
+        "Buy X get Y discounting the cheapest qualifying units",
+        "Append-only redemptions with race-free usage limits enforced by conditional update",
+        "Redemption releases that give a use back when an order is cancelled or refunded",
+        "Optional customer-eligibility and product-grouping seams that fail only the offers that name them",
+        "Customer reference redaction that keeps the redemption, its lines and its release"
+    ]
+}
